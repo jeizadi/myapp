@@ -12,12 +12,12 @@
 </svg>
 
 <% @shapes.each do |shape| %>
-	<h2> <%= shape[:type] %> </h2>
+	<h2> <%= shape[:name] %> </h2>
 <svg height=<%= shape[:svg_height] %>  width=<%= shape[:svg_width] %> >
 
-  <% if shape[:type] == 'star' or shape[:type] == 'triangle' then %>
+  <% if shape[:name] == 'star' or shape[:name] == 'triangle' then %>
   	<polygon points=<%= shape[:points] %> 
-  <% elsif shape[:type] == 'circle' then %>
+  <% elsif shape[:name] == 'circle' then %>
   	<circle cx=<%= shape[:cx] %> cy=<%= shape[:cy] %> r=<%= shape[:r] %>
   <% else %>
   	<rect width=<%= shape[:width] %> height=<%= shape[:height] %>

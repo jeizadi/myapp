@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  svg_width: MyString
+  svg_height: MyString
+  cx: MyString
+  cy: MyString
+  r: MyString
+  style: MyString
+  points: MyString
+  width: MyString
+  height: MyString
+
+two:
+  type: 
+  svg_width: MyString
+  svg_height: MyString
+  cx: MyString
+  cy: MyString
+  r: MyString
+  style: MyString
+  points: MyString
+  width: MyString
+  height: MyString

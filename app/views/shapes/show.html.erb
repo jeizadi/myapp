@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @shape.name %>
+</p>
+
+<p>
+  <strong>Svg width:</strong>
+  <%= @shape.svg_width %>
+</p>
+
+<p>
+  <strong>Svg height:</strong>
+  <%= @shape.svg_height %>
+</p>
+
+<p>
+  <strong>Cx:</strong>
+  <%= @shape.cx %>
+</p>
+
+<p>
+  <strong>Cy:</strong>
+  <%= @shape.cy %>
+</p>
+
+<p>
+  <strong>R:</strong>
+  <%= @shape.r %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @shape.style %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @shape.points %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @shape.width %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @shape.height %>
+</p>
+
+<svg height=<%= @shape[:svg_height] %>  width=<%= @shape[:svg_width] %> >
+
+  <% if @shape[:name] == 'star' or @shape[:name] == 'triangle' then %>
+    <polygon points=<%= @shape[:points] %> 
+  <% elsif @shape[:name] == 'circle' then %>
+    <circle cx=<%= @shape[:cx] %> cy=<%= @shape[:cy] %> r=<%= @shape[:r] %>
+  <% else %>
+    <rect width=<%= @shape[:width] %> height=<%= @shape[:height] %>
+  <% end %>
+
+  style=<%= @shape[:style] %> />
+</svg>
+
+<%= link_to 'Edit', edit_shape_path(@shape) %> |
+<%= link_to 'Back', shapes_path %>
