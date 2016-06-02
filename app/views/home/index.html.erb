@@ -1,1 +1,29 @@
 <h1> HI Soheil! </h1>
+
+<h2> star </h2>
+<svg width="300" height="200">
+  <polygon points="100,10 40,198 190,78 10,78 160,198"
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</svg>
+
+<h2> triangle </h2>
+<svg height="210" width="500">
+  <polygon points="250,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
+</svg>
+
+<% @shapes.each do |shape| %>
+	<h2> <%= shape[:type] %> </h2>
+<svg height=<%= shape[:svg_height] %>  width=<%= shape[:svg_width] %> >
+
+  <% if shape[:type] == 'star' or shape[:type] == 'triangle' then %>
+  	<polygon points=<%= shape[:points] %> 
+  <% elsif shape[:type] == 'circle' then %>
+  	<circle cx=<%= shape[:cx] %> cy=<%= shape[:cy] %> r=<%= shape[:r] %>
+  <% else %>
+  	<rect width=<%= shape[:width] %> height=<%= shape[:height] %>
+  <% end %>
+
+  style=<%= shape[:style] %> />
+</svg>
+
+<% end %>
